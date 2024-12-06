@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar System</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .ss {
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 40, 1) 50%, rgba(0, 0, 0, 1) 100%);
+            /* background: linear-gradient(to bottom, #0a0a0a, #1a1a1a); */
+            /* background: radial-gradient(circle, rgba(10, 10, 40, 1) 0%, rgba(30, 30, 70, 1) 50%, rgba(0, 0, 0, 1) 100%); */
+        }
+        h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: linear-gradient(to bottom, #0a0a0a, #1a1a1a);
+            font-variant: small-caps;
+            letter-spacing: 7px;
+            text-align: center;
+            color: rgb(206, 206, 206);
+            padding: 7px;
+        }
+        .sun {
+            background-image: url('sun.png');
+            background-size: cover;
+            background-position: center;
+            background-size: 3500%;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            height: 2800px;
+            width: 10%;
+            z-index: 1;  /* Ensure the sun is above other elements */
+            box-shadow: 0 0 80px 20px rgba(255, 94, 0, 0.971), 0 0 200px 50px rgba(255, 119, 0, 0.6);
+        }
+        
+/* ________________________________________________ MERCURY */
+        .mercury {
+            border: 4px solid white;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            transform: rotateX(120deg);
+            height: 100vh;
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .planetMercury {
+            background: url('mercury.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 3500%;
+            height: 500px;
+            width: 2%;
+            border-radius: 50%;
+            position: absolute;
+            animation: revolveMercury 60s linear infinite;
+            top: 0%;
+            left: 0%;
+        }
+        @keyframes revolveMercury {
+            0% {
+                left: 0%;
+                top: 25%;
+            }
+            10% {
+                left: 20%;
+                top: 60%;
+            }
+            20% {
+                left: 40%;
+                top: 70%;
+            }
+            30% {
+                left: 60%;
+                top: 60%;
+            }
+            40% {
+                left: 80%;
+                top: 50%;
+            }
+            50% {
+                left: 100%;
+                top: 30%;
+            }
+            60% {
+                left: 80%;
+                top: -20%;
+            }
+            70% {
+                left: 60%;
+                top: -25%;
+            }
+            80% {
+                left: 40%;
+                top: -30%;
+            }
+            90% {
+                left: 20%;
+                top: -30%;
+            }
+            100% {
+                left: 0%;
+                top: 0%;
+            }
+        }
+/* ________________________________________________ VENUS */
+        .venus {
+            border: 3px solid white;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            transform: rotateX(120deg);
+            height: 100vh;
+            width: 96%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .planetVenus {
+            background: url('venus.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 3500%;
+            height: 450px;
+            width: 3%;
+            border-radius: 50%;
+            animation: revolveVenus 120s linear infinite;
+            position: absolute;
+            left: 30%;
+            top: -25%;
+        }
+        @keyframes revolveVenus {
+            0% {
+                left: 60%;
+                top: -25%;
+            }
+            10% {
+                top:-20%;
+            }
+            15% {
+                top: -15%;
+            }
+            20% {
+                top: 0%;
+            }
+            23% {
+                top: 10%;
+            }
+            25% {
+                left: 99%;
+                top: 50%;
+            }
+            45% {
+                left: 50%;
+                top: 80%;
+            }
+            55% {
+                left: 40%;
+                top: 80%;
+            }
+            65% {
+                left: 30%;
+                top: 80%;
+            }
+            75% {
+                left: -2%;
+                top: 40%;
+            }
+            80% {
+                left: -2%;
+                top: 30%;
+            }
+            85% {
+                left: 20%;
+                top: -10%;
+            }
+            93% {
+                left: 40%;
+                top: -18%;
+            }
+            100% {
+                left: 60%;
+                top: -25%;
+            }
+        }
+/* ________________________________________________ EARTH */
+        .earth {
+            border: 2px solid white;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            transform: rotateX(120deg);
+            height: 100vh;
+            width: 97%;
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .planetEarth {
+            background: url('earth.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 800%;
+            height: 300px;
+            width: 4%;
+            border-radius: 50%;
+            position: absolute;
+            animation: revolveEarth 200s linear infinite;
+            top: -20%;
+            left: 45%;
+        }
+        @keyframes revolveEarth {
+            5% {
+                top: -20%;
+            }
+            15% {
+                top: -15%;
+            }
+            25% {
+                top: 30%;
+                left: 98%;
+            }
+            30% {
+                top: 67%;
+            }
+            35% {
+                top: 71%;
+                left: 77%;
+            }
+            45% {
+                top: 86%;
+                left: 60%;
+            }
+            50% {
+                top: 88%;
+                left: 50%;
+            }
+            58.3% {
+                top: 84%;
+            }
+            64.6% {
+                top: 80%;
+            }
+            72% {
+                top: 70%;
+            }
+            73% {
+                top: 60%;
+            }
+            74% {
+                top: 50%;
+            }
+            75% {
+                top: 20%;
+                left: -2%;
+            }
+            80% {
+                top: 0%;
+                left: 15%;
+            }
+            90% {
+                left: 30%;
+            }            100% {
+                left: 45%;
+            }
+        }
+
+/* ________________________________________________ MARS */
+        .mars {
+            border: 2px solid white;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            height: 100vh;
+            width: 98%;
+            transform: rotateX(120deg);
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .planetMars {
+            background: url('mars.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-size: 800%;
+            height: 150px;
+            width: 4%;
+            border-radius: 50%;
+            animation: revolveMars 400s linear infinite;
+            position: absolute;
+            left: -2%;
+            top: 43%;
+        }
+        @keyframes revolveMars {
+            0% {
+                left: -2%;
+                top: 53%;
+            }
+            5% {
+                top: 70%;
+            }
+            10% {
+                top: 83%;
+            }
+            15% {
+                top: 90%;
+            }
+            35% {
+                top: 90%;
+            }
+            40% {
+                top: 85%;
+            }
+            45% {
+                top: 70%;
+            }
+            50% {
+                left: 98%;
+                top: 53%;
+            }
+            53% {
+                top: 33%;
+                left: 98%;
+            }
+            60% {
+                top: 10%;
+                left: 90%;
+            }
+            65% {
+                top: -2%;
+                
+            }
+            85% {
+                top: -8%;
+            }
+            90% {
+                top: 0%;
+            }
+            95% {
+                top: 8%;
+            }
+            98% {
+                left: -1%;
+            }
+            100% {
+                top: 53%;
+                left: -2%;
+            }
+        }
+
+        ul {
+            background-color: white;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            list-style-type: none;
+        }
+        ul .one, .two, .three, .four, .five, .six, .seven, .eight {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background-color: white;
+            height: 10px;
+            width: 5px;
+            border-radius: 70%;
+            animation-name: shinning;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.9);
+            border: 1px solid white;
+        }
+        ul .two {
+            position: absolute;
+            left: 300px;
+            top: 600px;
+        }
+        ul .three {
+            position: absolute;
+            left: 600px;
+            top: 850px;
+        }
+        ul .four {
+            position: absolute;
+            left: 950px;
+            top: 650px;
+        }
+        ul .five {
+            position: absolute;
+            top: 25vh;
+            left: 110vh;
+        }
+        ul .six {
+            position: absolute;
+            top: 50vh;
+            left: 190vh;
+        }
+        ul .seven {
+            position: absolute;
+            top: 80vh;
+            left: 140vh;
+        }
+        ul .eight {
+            position: absolute;
+            top: 20vh;
+            left: 180vh;
+        } 
+        @keyframes shinning {
+            0% { opacity: 0.8; }
+            50% { opacity: 0.3; }
+            100% { opacity: 0.8; }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>The Planets</h1>
+
+    <ul>
+        <li class="one"></li>
+        <li class="two"></li>
+        <li class="three"></li>
+        <li class="four"></li>
+        <li class="five"></li>
+        <li class="six"></li>
+        <li class="seven"></li>
+        <li class="eight"></li>
+    </ul>
+ 
+    <div class="ss">
+        <div class="mars">
+            <div class="planetMars"></div>
+            <div class="earth">
+                <div class="planetEarth"></div>
+                <div class="venus">
+                    <div class="planetVenus"></div>
+                    <div class="mercury">
+                        <div class="planetMercury"></div>
+                        <div class="sun">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio" loop>
+        <source src="audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const audio = document.getElementById("audio");
+
+        window.onload = () => {
+            audio.play()
+        };
+
+        audio.addEventListener("ended", () => {
+            audio.play()
+        });
+
+        window.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play()
+            }
+        });
+    </script>
+</body>
+</html>
