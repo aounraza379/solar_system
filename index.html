@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar System</title>
+    <link rel="icon" href="pfp.jpeg" type="image/png">
     <style>
         * {
             margin: 0px;
@@ -15,6 +16,7 @@
             background: radial-gradient(circle, rgba(0, 0, 0, 1) 0%, rgba(10, 10, 40, 1) 50%, rgba(0, 0, 0, 1) 100%);
             /* background: linear-gradient(to bottom, #0a0a0a, #1a1a1a); */
             /* background: radial-gradient(circle, rgba(10, 10, 40, 1) 0%, rgba(30, 30, 70, 1) 50%, rgba(0, 0, 0, 1) 100%); */
+            overflow: hidden;
         }
         h1 {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -34,7 +36,7 @@
             border-radius: 50%;
             height: 2800px;
             width: 10%;
-            z-index: 1;  /* Ensure the sun is above other elements */
+            z-index: 1;
             box-shadow: 0 0 80px 20px rgba(255, 94, 0, 0.971), 0 0 200px 50px rgba(255, 119, 0, 0.6);
         }
         
@@ -62,13 +64,13 @@
             border-radius: 50%;
             position: absolute;
             animation: revolveMercury 60s linear infinite;
-            top: 0%;
+            top: 40%;
             left: 0%;
         }
         @keyframes revolveMercury {
             0% {
                 left: 0%;
-                top: 25%;
+                top: 40%;
             }
             10% {
                 left: 20%;
@@ -80,35 +82,32 @@
             }
             30% {
                 left: 60%;
-                top: 60%;
+                top: 70%;
             }
             40% {
                 left: 80%;
-                top: 50%;
+                top: 60%;
             }
             50% {
-                left: 100%;
-                top: 30%;
+                left: 99%;
+                top: 20%;
             }
-            60% {
-                left: 80%;
-                top: -20%;
+            62.5% {
+                top: -15%;
             }
-            70% {
-                left: 60%;
-                top: -25%;
-            }
-            80% {
-                left: 40%;
+            75% {
+                left: 50%;
                 top: -30%;
             }
-            90% {
-                left: 20%;
-                top: -30%;
+            87.5% {
+                top: -15%;
+            }
+            99% {
+                top: 0%;
+                left: -1%;
             }
             100% {
-                left: 0%;
-                top: 0%;
+                top: 40%;
             }
         }
 /* ________________________________________________ VENUS */
@@ -135,7 +134,7 @@
             border-radius: 50%;
             animation: revolveVenus 120s linear infinite;
             position: absolute;
-            left: 30%;
+            left: 60%;
             top: -25%;
         }
         @keyframes revolveVenus {
@@ -143,48 +142,42 @@
                 left: 60%;
                 top: -25%;
             }
-            10% {
-                top:-20%;
+            6.5% {
+                top: -20%;
             }
-            15% {
-                top: -15%;
+            12.75% {
+                top: -10%;
             }
-            20% {
-                top: 0%;
-            }
-            23% {
-                top: 10%;
+            24% {
+                /* top: 0%; */
             }
             25% {
                 left: 99%;
-                top: 50%;
+                top: 25%;
+            }
+            35% {
+                top: 70%;
             }
             45% {
-                left: 50%;
                 top: 80%;
             }
             55% {
-                left: 40%;
                 top: 80%;
             }
             65% {
-                left: 30%;
-                top: 80%;
+                top: 70%;
             }
             75% {
-                left: -2%;
-                top: 40%;
+                top: 50%;
             }
             80% {
                 left: -2%;
                 top: 30%;
             }
             85% {
-                left: 20%;
                 top: -10%;
             }
             93% {
-                left: 40%;
                 top: -18%;
             }
             100% {
@@ -223,11 +216,14 @@
             5% {
                 top: -20%;
             }
-            15% {
+            12.5% {
                 top: -15%;
             }
+            20% {
+                top: 0%;
+            }
             25% {
-                top: 30%;
+                top: 35%;
                 left: 98%;
             }
             30% {
@@ -235,42 +231,31 @@
             }
             35% {
                 top: 71%;
-                left: 77%;
             }
             45% {
                 top: 86%;
-                left: 60%;
             }
             50% {
                 top: 88%;
                 left: 50%;
             }
-            58.3% {
-                top: 84%;
+            62.6% {
+                top: 85%;
             }
-            64.6% {
-                top: 80%;
+            68.8% {
+                top: 77%;
             }
-            72% {
-                top: 70%;
-            }
-            73% {
-                top: 60%;
-            }
-            74% {
-                top: 50%;
+            74.5% {
+                top: 40%;
             }
             75% {
-                top: 20%;
+                top: 30%;
                 left: -2%;
             }
             80% {
                 top: 0%;
-                left: 15%;
-            }
-            90% {
-                left: 30%;
-            }            100% {
+            } 
+            100% {
                 left: 45%;
             }
         }
